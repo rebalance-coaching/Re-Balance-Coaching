@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Re:Balance Coaching｜介護者セルフケアコーチング｜理学療法士・保健医療学博士</title>
+  <meta name="description" content="Re:Balance Coachingは、理学療法士・保健医療学博士による介護者セルフケアコーチングです。介護を支える人が自分を後回しにしないための行動習慣・メンタルサポートを提供します。" />
+  <style>
+    :root {
+      --bg: #f7f8f6;
+      --surface: #ffffff;
+      --text: #1f2a24;
+      --muted: #5f6b64;
+      --line: #d9dfda;
+      --accent: #4b7f68;
+      --accent-2: #e8f1ec;
+      --max: 1100px;
+      --radius: 20px;
+      --shadow: 0 10px 30px rgba(31, 42, 36, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.75;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(247, 248, 246, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(217, 223, 218, 0.8);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 72px 0 40px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--accent-2);
+      color: var(--accent);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.2;
+      margin: 0 0 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      font-size: 1.06rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover { transform: translateY(-1px); opacity: 0.95; }
+
+    .btn-secondary {
+      background: transparent;
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    .hero-card,
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 28px;
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.15rem;
+    }
+
+    .hero-list {
+      margin: 0;
+      padding-left: 1.2em;
+      color: var(--muted);
+    }
+
+    section {
+      padding: 38px 0;
+    }
+
+    .section-head {
+      margin-bottom: 20px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      margin: 0 0 10px;
+      line-height: 1.25;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.08rem;
+    }
+
+    .muted { color: var(--muted); }
+
+    .check-list,
+    .flow-list,
+    .faq-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .check-item,
+    .flow-item,
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 20px;
+    }
+
+    .flow-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent-2);
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .profile {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .profile-photo {
+      min-height: 320px;
+      background: linear-gradient(135deg, #dfe9e3, #f7f8f6);
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      text-align: center;
+      padding: 24px;
+    }
+
+    .price {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin: 12px 0;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-2);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .contact-box {
+      text-align: center;
+      padding: 34px;
+      background: linear-gradient(180deg, #ffffff, #f1f5f2);
+    }
+
+    footer {
+      padding: 28px 0 42px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .small {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .grid-3,
+      .grid-2,
+      .profile {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .hero-card,
+      .card,
+      .contact-box {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 2.1rem;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .hero {
+        padding-top: 26px;
+      }
+    }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .hero-card,
+      .card,
+      .contact-box {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand" style="line-height:1.25;">Re:Balance Coaching<br><span style="font-size:0.78rem; font-weight:500; color: var(--muted);">ー介護者セルフケアコーチングー</span></div>
+      <nav class="nav-links">
+        <a href="#about">こんな方へ</a>
+        <a href="#service">サービス</a>
+        <a href="#profile">プロフィール</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">介護者・介護従事者のための 行動習慣 × メンタルコーチング</div>
+          <h1>介護を支える人が、<br>自分を後回しにしないために。</h1>
+          <p class="lead">
+            介護の現場や家庭では、責任感の強さゆえに自分の心身を後回しにしやすくなります。<br>
+            本コーチングでは、気持ちの整理と行動習慣の再設計を通して、
+            <strong>「無理なく続けられる働き方・関わり方・自分の整え方」</strong>を一緒に見つけていきます。
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact" style="min-width: 240px; font-size: 1rem;">初回相談をメールで申し込む</a>
+            <a class="btn btn-secondary" href="#service">料金・サービスを見る</a>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 16px;">
+            <span style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:999px; background:#fff; border:1px solid var(--line); font-size:0.9rem;">初回 60分 3,000円</span>
+            <span style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:999px; background:#fff; border:1px solid var(--line); font-size:0.9rem;">2回目以降 60分 12,000円</span>
+            <span style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:999px; background:#fff; border:1px solid var(--line); font-size:0.9rem;">オンライン対応</span>
+          </div>
+          <p class="small">初回相談では、今の悩み・負担感・理想の状態を丁寧に整理します。</p>
+        </div>
+
+        <aside class="hero-card" style="padding: 0; overflow: hidden;">
+          <div style="padding: 26px 26px 18px; background: linear-gradient(180deg, #ffffff, #f4f8f6); border-bottom: 1px solid var(--line); text-align: center;">
+            <img src="logo.png" alt="Re:Balance Coaching ロゴ" style="max-width: 260px; width: 100%; height: auto; margin: 0 auto 10px; filter: drop-shadow(0 10px 24px rgba(0,0,0,0.08));">
+            <div class="small">介護者セルフケアを支える専門コーチング</div>
+          </div>
+          <div style="padding: 24px 26px 26px;">
+            <h3 style="margin-bottom: 14px;">このようなお悩みに</h3>
+            <ul class="hero-list">
+              <li>介護や支援に追われ、自分のことが後回しになっている</li>
+              <li>気持ちの切り替えが難しく、疲労感や不安が続いている</li>
+              <li>やるべきことは多いのに、優先順位がつけられない</li>
+              <li>周囲のために頑張っているが、孤独感を抱えやすい</li>
+              <li>習慣を整えたいが、一人だと続かない</li>
+            </ul>
+            <div style="margin-top: 18px; padding: 16px; background: var(--accent-2); border-radius: 14px;">
+              <strong style="display:block; margin-bottom:6px;">初回相談 60分 3,000円</strong>
+              <div class="small">メールで簡単にご相談いただけます</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>こんな方におすすめです</h2>
+          <p>介護に関わる方の現実に寄り添い、実行しやすい形でサポートします。</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>ご家族を介護している方</h3>
+            <p class="muted">日々の介護の中で、心の余裕や自分の時間を持ちにくい方へ。無理のない行動の組み立てを一緒に整理します。</p>
+          </div>
+          <div class="card">
+            <h3>介護職・医療職・福祉職の方</h3>
+            <p class="muted">責任感が強く、抱え込みやすい方へ。現場でのストレスとの向き合い方や、回復のための習慣づくりを支援します。</p>
+          </div>
+          <div class="card">
+            <h3>支える側として疲弊しやすい方</h3>
+            <p class="muted">相手を優先するあまり自分を見失いがちな方に、感情整理と自己管理の土台づくりを行います。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>コーチングで目指す変化</h2>
+          <p>気合いで頑張り続けるのではなく、続けられる仕組みをつくります。</p>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Before</h3>
+            <div class="check-list">
+              <div class="check-item">頭の中が整理できず、いつも気持ちが張りつめている</div>
+              <div class="check-item">やるべきことが多く、優先順位が分からない</div>
+              <div class="check-item">自分の感情や疲れに気づく余裕がない</div>
+              <div class="check-item">続けたい習慣があっても、途中で崩れてしまう</div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>After</h3>
+            <div class="check-list">
+              <div class="check-item">今の自分に必要なことが整理され、行動が明確になる</div>
+              <div class="check-item">気持ちの波に振り回されにくくなる</div>
+              <div class="check-item">自分を責めすぎず、現実的に前へ進める</div>
+              <div class="check-item">小さな習慣が定着し、安定して続けられる</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="service">
+      <div class="container">
+        <div class="section-head">
+          <h2>サービス内容</h2>
+          <p>状況やご希望に応じて、単発相談から継続サポートまで対応します。</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="badge">初めての方へ</div>
+            <h3>初回相談</h3>
+            <p class="muted">現在の悩み、負担感、生活や仕事の状況を整理し、どのような支援が合うかを一緒に確認します。</p>
+            <div class="price">60分 3,000円</div>
+            <p class="small">初めての方向けの導入セッションです。</p>
+          </div>
+          <div class="card">
+            <div class="badge">単発サポート</div>
+            <h3>個別コーチング</h3>
+            <p class="muted">気持ちの整理、課題の言語化、優先順位づけ、行動計画づくりまでを1回ごとに丁寧にサポートします。</p>
+            <div class="price">60分 12,000円</div>
+            <p class="small">2回目以降の単発セッション料金です。</p>
+          </div>
+          <div class="card">
+            <div class="badge">継続支援</div>
+            <h3>継続コーチング</h3>
+            <p class="muted">習慣化やメンタルの安定には、継続的な振り返りが効果的です。月単位で伴走し、無理のない変化を支援します。</p>
+            <div class="price">60分 12,000円／回</div>
+            <p class="small">継続回数や頻度はご相談のうえ調整します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>セッションの流れ</h2>
+          <p>安心して相談できるよう、シンプルで分かりやすい進め方を大切にしています。</p>
+        </div>
+        <div class="grid-2">
+          <div class="flow-item">
+            <div class="flow-number">1</div>
+            <strong>メールでお問い合わせ</strong>
+            <div class="muted">お悩みや相談したいテーマ、希望日時を簡単にお知らせください。</div>
+          </div>
+          <div class="flow-item">
+            <div class="flow-number">2</div>
+            <strong>日程調整・事前確認</strong>
+            <div class="muted">セッション形式や確認事項をご案内し、安心して当日を迎えられるようにします。</div>
+          </div>
+          <div class="flow-item">
+            <div class="flow-number">3</div>
+            <strong>オンラインセッション</strong>
+            <div class="muted">現在地を整理し、テーマに沿って思考と感情を言語化しながら進めます。</div>
+          </div>
+          <div class="flow-item">
+            <div class="flow-number">4</div>
+            <strong>行動の具体化</strong>
+            <div class="muted">セッション後に何をどう実行するかを、無理のない形で明確にします。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile">
+      <div class="container">
+        <div class="section-head">
+          <h2>プロフィール</h2>
+          <p>医療・教育・在宅支援の経験を土台に、現場感のあるサポートを行います。</p>
+        </div>
+        <div class="profile">
+          <div class="profile-photo" style="background: linear-gradient(180deg, #ffffff, #f3f7f5); padding: 28px;">
+            <img src="logo.png" alt="Re:Balance Coaching ロゴ" style="max-width: 300px; width: 100%; height: auto; filter: drop-shadow(0 10px 24px rgba(0,0,0,0.08));">
+          </div>
+          </div>
+          <div class="card">
+            <h3>有本 邦洋</h3>
+            <p>
+              <strong>理学療法士・保健医療学博士</strong>。在宅リハビリテーションの現場で、生活期にある多くの利用者様とご家族に関わってきました。
+              支援を必要とする方だけでなく、日々その方を支える介護者や介護従事者が、見えにくい疲労や不安、責任感の重さを抱えやすいことを、臨床の中で数多く実感してきました。
+            </p>
+            <p>
+              さらに、<strong>理学療法士養成校教員</strong>として人材育成に携わり、知識や技術だけでなく、対人支援職に必要な自己理解やセルフマネジメントの重要性を伝えてきました。
+              学術面では<strong>保健医療学博士</strong>として、専門性を理論的にも深めています。
+            </p>
+            <p>
+              私の強みは、<strong>現場感のある理解</strong>と、<strong>専門職としての客観性</strong>の両方を持っていることです。
+              単に励ますのではなく、今の状況を整理し、気持ちを言語化し、実際に続けられる行動習慣へ落とし込むことを大切にしています。
+            </p>
+            <p>
+              Re:Balance Coachingでは、介護を支える人が自分を犠牲にし続けるのではなく、
+              <strong>「自分を整えながら、大切な人や仕事に向き合える状態」</strong>を目指します。
+              ひとりで抱え込まず、安心して話せる場として伴走します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>大切にしていること</h2>
+          <p>専門職としての知見だけでなく、一人の人として丁寧に向き合います。</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>現実に合う支援</h3>
+            <p class="muted">理想論ではなく、介護や仕事の現実の中で本当に続けられる行動に落とし込みます。</p>
+          </div>
+          <div class="card">
+            <h3>気持ちの整理を重視</h3>
+            <p class="muted">行動だけでなく、その背景にある思いや負担感も丁寧に扱いながら進めます。</p>
+          </div>
+          <div class="card">
+            <h3>自分を責めない習慣化</h3>
+            <p class="muted">できなかったことではなく、続けられる形を見つけていく伴走型のコーチングです。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>よくあるご質問</h2>
+          <p>初めての方からよくいただくご質問をまとめています。</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <strong>Q. コーチングでは何を話せばよいですか？</strong>
+            <div class="muted">A. まとまっていなくても大丈夫です。今感じていることや困っていることから一緒に整理していきます。</div>
+          </div>
+          <div class="faq-item">
+            <strong>Q. 介護のこと以外でも相談できますか？</strong>
+            <div class="muted">A. はい。行動習慣、メンタル、働き方、人間関係など、介護と関連するテーマも含めてご相談いただけます。</div>
+          </div>
+          <div class="faq-item">
+            <strong>Q. オンラインが苦手でも大丈夫ですか？</strong>
+            <div class="muted">A. 事前に接続方法をご案内します。できるだけ不安なく参加できるよう配慮します。</div>
+          </div>
+          <div class="faq-item">
+            <strong>Q. 医療行為や治療相談はできますか？</strong>
+            <div class="muted">A. 本サービスはコーチングであり、医療行為や診断を行うものではありません。必要に応じて適切な医療機関等の利用をご検討ください。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="card contact-box">
+          <div class="section-head" style="margin-bottom: 18px;">
+            <h2>お問い合わせ</h2>
+            <p>ご相談・ご質問はメールにて受け付けています。</p>
+          </div>
+          <p>
+            下のボタンから、お名前（またはニックネーム）・ご相談内容・ご希望日時をご記入のうえご連絡ください。
+          </p>
+          <div class="cta-row" style="justify-content:center;">
+            <a class="btn btn-primary" href="mailto:rebalance.selfcare@gmail.com?subject=%E3%82%B3%E3%83%BC%E3%83%81%E3%83%B3%E3%82%B0%E3%81%AE%E7%9B%B8%E8%AB%87">メールを送る</a>
+            <a class="btn btn-secondary" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagramを見る</a>
+          </div>
+          <p class="small">お問い合わせには通常2〜3日以内に返信いたします。</p>
+        </div>
+      </div>
+    </section>
+      <section id="privacy">
+      <div class="container">
+        <div class="card" style="margin-top: 12px;">
+          <div class="section-head">
+            <h2>プライバシーポリシー</h2>
+            <p>安心してご相談いただくために、個人情報の取り扱いについて明示しています。</p>
+          </div>
+          <p>お問い合わせ時にご提供いただいた氏名・メールアドレス・ご相談内容は、返信およびサービス提供に必要な範囲でのみ利用します。</p>
+          <p>取得した個人情報は、法令に基づく場合を除き、本人の同意なく第三者へ提供しません。</p>
+          <p>個人情報の管理には十分配慮し、安全に取り扱います。</p>
+          <p>お問い合わせ：rebalance.selfcare@gmail.com</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© Re:Balance Coaching</div>
+      <div class="small">このサイトは、介護者・介護従事者向けコーチングサービスの案内ページです。</div>
+    </div>
+  </footer>
+</body>
+</html>
