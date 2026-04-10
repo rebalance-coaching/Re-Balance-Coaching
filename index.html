@@ -134,6 +134,17 @@
       color: var(--text);
     }
 
+    .btn-note {
+      background: var(--accent-2);
+      border-color: #cfe0d6;
+      color: var(--accent);
+    }
+
+    .btn-note:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
     .hero-card,
     .card {
       background: var(--surface);
@@ -232,8 +243,8 @@
 
     .profile {
       display: grid;
-      grid-template-columns: 0.75fr 1.25fr;
-      gap: 24px;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 28px;
       align-items: stretch;
     }
 
@@ -247,7 +258,7 @@
       justify-content: center;
       color: var(--muted);
       text-align: center;
-      padding: 24px;
+      overflow: hidden;
     }
 
     .price {
@@ -329,17 +340,6 @@
         padding-top: 26px;
       }
     }
-
-      .nav-links {
-        gap: 12px;
-      }
-
-      .hero-card,
-      .card,
-      .contact-box {
-        padding: 22px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -361,8 +361,12 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">介護者・介護従事者のための 行動習慣 × メンタルコーチング</div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px;">
+            <span style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:999px; background:#fff; border:1px solid var(--line); font-size:0.9rem;">理学療法士・保健医療学博士</span>
+            <span style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:999px; background:#fff; border:1px solid var(--line); font-size:0.9rem;">初回相談 60分 3,000円</span>
+          </div>
           <h1>介護を支える人が、<br>自分を後回しにしないために。</h1>
-          <p class="lead">
+          <p class="lead"><strong style="color:var(--text);">介護を続けるために必要なのは、頑張り続けることではなく、自分を整えながら続けることです。</strong><br>
             介護の現場や家庭では、責任感の強さゆえに自分の心身を後回しにしやすくなります。<br>
             本コーチングでは、気持ちの整理と行動習慣の再設計を通して、
             <strong>「無理なく続けられる働き方・関わり方・自分の整え方」</strong>を一緒に見つけていきます。
@@ -376,7 +380,7 @@
             <span style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:999px; background:#fff; border:1px solid var(--line); font-size:0.9rem;">2回目以降 60分 12,000円</span>
             <span style="display:inline-flex; align-items:center; padding:8px 12px; border-radius:999px; background:#fff; border:1px solid var(--line); font-size:0.9rem;">オンライン対応</span>
           </div>
-          <p class="small">初回相談では、今の悩み・負担感・理想の状態を丁寧に整理します。</p>
+          <p class="small">初回相談では、今の悩み・負担感・理想の状態を丁寧に整理します。返信は通常2〜3日以内です。</p>
         </div>
 
         <aside class="hero-card" style="padding: 0; overflow: hidden;">
@@ -524,29 +528,37 @@
           <p>医療・教育・在宅支援の経験を土台に、現場感のあるサポートを行います。</p>
         </div>
         <div class="profile">
-          <div class="profile-photo" style="background: linear-gradient(180deg, #ffffff, #f3f7f5); padding: 28px;">
-            <img src="logo.png" alt="Re:Balance Coaching ロゴ" style="max-width: 300px; width: 100%; height: auto; filter: drop-shadow(0 10px 24px rgba(0,0,0,0.08));">
+          <div class="profile-photo" style="background: linear-gradient(180deg, #ffffff, #f3f7f5); padding: 0;">
+            <img src="profile.jpg" alt="有本邦洋 プロフィール写真" style="max-width: 100%; width: 100%; height: 100%; min-height: 100%; box-shadow: 0 10px 24px rgba(0,0,0,0.08); object-fit: cover; display:block;">
           </div>
-          </div>
-          <div class="card">
-            <h3>有本 邦洋</h3>
+          <div class="card" style="display:flex; flex-direction:column; justify-content:center;">
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
+              <span class="badge">理学療法士</span>
+              <span class="badge">理学療法士養成校教員</span>
+              <span class="badge">保健医療学博士</span>
+            </div>
+            <h3 style="font-size:1.9rem; margin-bottom:8px;">有本 邦洋</h3>
+            <p style="font-weight:700; margin-top:0; margin-bottom:16px; color: var(--accent);">Re:Balance Coaching 代表</p>
             <p>
-              <strong>理学療法士・保健医療学博士</strong>。在宅リハビリテーションの現場で、生活期にある多くの利用者様とご家族に関わってきました。
-              支援を必要とする方だけでなく、日々その方を支える介護者や介護従事者が、見えにくい疲労や不安、責任感の重さを抱えやすいことを、臨床の中で数多く実感してきました。
+              理学療法士として在宅リハビリテーションの現場で多くの利用者様とご家族に関わる中で、
+              介護を支える人ほど、自分の心身を後回しにしやすい現実を数多く見てきました。
+              介護者や介護従事者が抱える疲労、不安、責任感の重さに、専門職として向き合ってきたことが私の原点です。
             </p>
             <p>
-              さらに、<strong>理学療法士養成校教員</strong>として人材育成に携わり、知識や技術だけでなく、対人支援職に必要な自己理解やセルフマネジメントの重要性を伝えてきました。
-              学術面では<strong>保健医療学博士</strong>として、専門性を理論的にも深めています。
+              さらに、理学療法士養成校教員として人材育成に携わり、保健医療学博士として専門性を深めてきました。
+              現場感のある理解と、専門的な視点の両方を活かし、気持ちの整理から実際に続けられる行動習慣づくりまで丁寧にサポートします。
             </p>
-            <p>
-              私の強みは、<strong>現場感のある理解</strong>と、<strong>専門職としての客観性</strong>の両方を持っていることです。
-              単に励ますのではなく、今の状況を整理し、気持ちを言語化し、実際に続けられる行動習慣へ落とし込むことを大切にしています。
-            </p>
-            <p>
-              Re:Balance Coachingでは、介護を支える人が自分を犠牲にし続けるのではなく、
-              <strong>「自分を整えながら、大切な人や仕事に向き合える状態」</strong>を目指します。
-              ひとりで抱え込まず、安心して話せる場として伴走します。
-            </p>
+            <div style="margin: 10px 0 18px; padding: 16px; background: var(--accent-2); border-radius: 16px; border: 1px solid var(--line);">
+              <strong style="display:block; margin-bottom:6px;">こんな方に向いています</strong>
+              <div class="small">介護で自分のことが後回しになっている方／支える立場として疲れや不安を抱えやすい方／気持ちを整理し、無理のない習慣を整えたい方</div>
+            </div>
+            <div class="cta-row" style="margin-bottom:12px;">
+              <a class="btn btn-primary" href="mailto:rebalance.selfcare@gmail.com?subject=%E5%88%9D%E5%9B%9E%E7%9B%B8%E8%AB%87%E3%81%AE%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF" style="min-width:240px;">初回相談を申し込む</a>
+              <a class="btn btn-secondary" href="https://www.instagram.com/arimoto.coach/" target="_blank" rel="noopener">日々の発信を見る</a>
+              <a class="btn btn-note" href="https://note.com/rebalance_care08" target="_blank" rel="noopener">介護者セルフケアの記事を読む</a>
+            </div>
+            <p class="small" style="margin:0 0 8px;">初回相談 60分 3,000円／オンライン対応</p>
+            <p class="small" style="margin:0;">まずはInstagramで雰囲気を知りたい方、じっくり文章を読みたい方はnoteからご覧いただけます。ご相談前に記事を読んでいただく方も多いです。</p>
           </div>
         </div>
       </div>
@@ -614,7 +626,8 @@
           </p>
           <div class="cta-row" style="justify-content:center;">
             <a class="btn btn-primary" href="mailto:rebalance.selfcare@gmail.com?subject=%E3%82%B3%E3%83%BC%E3%83%81%E3%83%B3%E3%82%B0%E3%81%AE%E7%9B%B8%E8%AB%87">メールを送る</a>
-            <a class="btn btn-secondary" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagramを見る</a>
+            <a class="btn btn-secondary" href="https://www.instagram.com/arimoto.coach/" target="_blank" rel="noopener">日々の発信を見る</a>
+            <a class="btn btn-note" href="https://note.com/rebalance_care08" target="_blank" rel="noopener">介護者セルフケアの記事を読む</a>
           </div>
           <p class="small">お問い合わせには通常2〜3日以内に返信いたします。</p>
         </div>
