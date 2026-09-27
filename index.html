@@ -734,6 +734,129 @@
       color: var(--muted);
     }
 
+    .testimonial-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fffdf9;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 30px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial-card::before {
+      content: "“";
+      position: absolute;
+      top: -8px;
+      left: 18px;
+      font-size: 6rem;
+      line-height: 1;
+      color: rgba(116, 184, 138, 0.16);
+      font-family: Georgia, serif;
+      pointer-events: none;
+    }
+
+    .testimonial-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: var(--brand-mist);
+      color: var(--brand-teal);
+      font-size: 0.88rem;
+      font-weight: 800;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-quote {
+      position: relative;
+      z-index: 1;
+      font-size: 1.03rem;
+      line-height: 1.95;
+      color: var(--text);
+    }
+
+    .testimonial-quote p {
+      margin: 0 0 14px;
+    }
+
+    .testimonial-quote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .testimonial-note {
+      max-width: 900px;
+      margin: 16px auto 0;
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .testimonial-person {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-avatar {
+      flex: 0 0 58px;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--brand-mist);
+      border: 1px solid var(--line);
+    }
+
+    .testimonial-avatar svg {
+      width: 34px;
+      height: 34px;
+      fill: var(--brand-teal);
+      opacity: 0.9;
+    }
+
+    .testimonial-person-copy {
+      min-width: 0;
+    }
+
+    .testimonial-person-copy .testimonial-meta {
+      margin-bottom: 5px;
+    }
+
+    .testimonial-anonymous {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .testimonial-actions {
+      max-width: 900px;
+      margin: 18px auto 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (max-width: 640px) {
+      .testimonial-card {
+        padding: 24px 20px;
+      }
+
+      .testimonial-quote {
+        font-size: 0.98rem;
+        line-height: 1.85;
+      }
+    }
+
     .profile-card-wide {
       display: grid;
       grid-template-columns: 1.4fr 0.6fr;
@@ -1420,7 +1543,7 @@
 </head>
 
 <body>
-  <!-- Re:Balance V42 -->
+  <!-- Re:Balance V44 -->
   <header>
     <div class="container nav">
       <a href="#" class="brand" aria-label="Re:Balance 介護者サポート">
@@ -1691,6 +1814,62 @@
         <p class="case-note">
           ※上記はサービス内容をイメージしていただくための想定例であり、実際のお客様の声・事例ではありません。
         </p>
+      </div>
+    </section>
+
+    <section id="voices">
+      <div class="container">
+        <div class="section-head">
+          <h2>ご相談いただいた方の声</h2>
+          <p>実際にオンライン相談をご利用いただいた方から、ご感想をいただきました。</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-person">
+            <div class="testimonial-avatar" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img" focusable="false">
+                <circle cx="32" cy="22" r="12"></circle>
+                <path d="M10 56c1.8-12.2 10.7-19 22-19s20.2 6.8 22 19H10z"></path>
+              </svg>
+            </div>
+            <div class="testimonial-person-copy">
+              <div class="testimonial-meta">50代女性｜義母についてのご相談</div>
+              <span class="testimonial-anonymous">匿名で掲載しています</span>
+            </div>
+          </div>
+          <div class="testimonial-quote">
+            <p><strong>「今回相談して、本当に良かったです。」</strong></p>
+            <p>
+              介護保険や要介護認定についてほとんど知識がありませんでしたが、
+              どんなサポートを受けられるのか、これから何を考えておいたらよいのかを
+              教えていただけたことが、とてもありがたかったです。
+            </p>
+            <p>
+              アリ先生の優しい雰囲気のおかげで、緊張することなく、
+              安心していろいろ聞くことができました。
+            </p>
+            <p>
+              介護のことはわからないことばかりでしたが、
+              今回相談できたことで、とても心強く感じました。
+            </p>
+          </div>
+        </div>
+
+        <p class="testimonial-note">
+          ※ご本人の許可をいただき、個人が特定されない形で一部を抜粋して掲載しています。
+          個人の感想であり、相談による変化や結果を保証するものではありません。
+        </p>
+
+        <div class="testimonial-actions">
+          <a
+            class="btn btn-note"
+            href="https://note.com/rebalance_care08"
+            target="_blank"
+            rel="noopener"
+          >
+            noteを読む
+          </a>
+        </div>
       </div>
     </section>
 
