@@ -1539,11 +1539,92 @@
       }
     }
 
+
+
+    /* ===== Re:Balance V45 : consumer-focused hero & conversion refinements ===== */
+    .hero-message {
+      max-width: 930px;
+      margin: 26px auto 0;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .hero-message h1 {
+      margin: 0 0 10px;
+      color: #3B6C52;
+      font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-message p {
+      margin: 0 auto;
+      max-width: 780px;
+      color: #4D6458;
+      font-size: 1.03rem;
+      font-weight: 700;
+      line-height: 1.85;
+    }
+
+    .hero-bottom {
+      margin-top: 20px;
+    }
+
+    .hero-bottom .cta-row {
+      align-content: center;
+    }
+
+    .cta-note {
+      flex-basis: 100%;
+      margin: -2px 0 2px;
+      color: #60746A;
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .pricing-reassurance {
+      display: block;
+      margin-top: 10px;
+      color: #3B6C52;
+      font-weight: 900;
+    }
+
+    .hero {
+      padding-bottom: 34px;
+    }
+
+    #support {
+      padding-top: 38px;
+    }
+
+    @media (max-width: 760px) {
+      .hero-message {
+        margin-top: 20px;
+        padding: 0 8px;
+        text-align: left;
+      }
+
+      .hero-message p {
+        font-size: 0.98rem;
+      }
+
+      .cta-note {
+        text-align: left;
+        margin-top: 0;
+      }
+
+      #support {
+        padding-top: 30px;
+      }
+    }
+
 </style>
 </head>
 
 <body>
-  <!-- Re:Balance V44 -->
+  <!-- Re:Balance V45 -->
   <header>
     <div class="container nav">
       <a href="#" class="brand" aria-label="Re:Balance 介護者サポート">
@@ -1552,7 +1633,7 @@
       </a>
 
       <nav class="nav-links" aria-label="メインナビゲーション">
-        <a href="#support">オンライン相談</a>
+        <a href="#support">相談について</a>
         <a href="#cases">相談例</a>
         <a href="#service">サービス・料金</a>
         <a href="#profile">プロフィール</a>
@@ -1564,7 +1645,7 @@
           target="_blank"
           rel="noopener"
         >
-          初回30分 3,000円｜事前質問・予約へ
+          初回30分 3,000円｜オンライン相談を予約する
         </a>
       </nav>
     </div>
@@ -1584,6 +1665,14 @@
           </div>
         </div>
 
+        <div class="hero-message" aria-label="Re:Balanceからのメッセージ">
+          <h1>家族の介護、一人で抱えていませんか？</h1>
+          <p>
+            身体の疲れ、介助の悩み、仕事との両立などを、
+            今の生活で何を変えられるかという視点から一緒に整理するオンライン個別相談です。
+          </p>
+        </div>
+
         <div class="hero-bottom">
           <div class="profile-mini">
             <div class="profile-mini-inner">
@@ -1597,7 +1686,7 @@
                 <strong>有本くにひろ（アリ先生）</strong>
                 <span class="profile-role">介護者の暮らしと身体を支える理学療法士</span>
                 <span class="profile-credentials">保健医療学博士｜Re:Balance 代表</span>
-                <span>介護を行う上での悩みや介助方法、介護されるご家族の生活動作や身体の状態についてご相談ください。</span>
+                <span>介護するあなた自身の身体の疲れや不安、仕事との両立、介助方法、ご家族の生活動作などをご相談いただけます。</span>
               </div>
             </div>
           </div>
@@ -1609,8 +1698,9 @@
               target="_blank"
               rel="noopener"
             >
-              初回30分 3,000円｜事前質問・予約へ
+              初回30分 3,000円｜オンライン相談を予約する
             </a>
+            <p class="cta-note">初回30分では、お困りごとの整理と今後の相談内容を一緒に確認します。</p>
 
             <a class="btn btn-secondary" href="#service">
               サービス内容・料金を見る
@@ -1885,6 +1975,7 @@
         <p class="pricing-intro">
           初めての方は、まず30分で今のお悩みをお聞きします。
           2回目以降は、相談内容に合わせて30分または60分をご利用いただけます。
+          <strong class="pricing-reassurance">継続契約は必要ありません。必要なときに1回ずつご相談いただけます。</strong>
         </p>
 
         <div class="pricing-grid-3">
@@ -1907,7 +1998,7 @@
               rel="noopener"
               style="width: 100%; margin-top: 16px;"
             >
-              初回30分 3,000円｜事前質問・予約へ
+              初回30分 3,000円｜オンライン相談を予約する
             </a>
           </div>
 
@@ -1983,7 +2074,7 @@
             <div class="flow-number">1</div>
             <strong>事前質問に回答する</strong>
             <div class="muted">
-              「初回30分 3,000円｜事前質問・予約へ」から、3つの簡単な質問にご回答ください。
+              「初回30分 3,000円｜オンライン相談を予約する」から、3つの簡単な質問にご回答ください。
             </div>
           </div>
 
@@ -2151,7 +2242,7 @@
                 target="_blank"
                 rel="noopener"
               >
-                初回30分 3,000円｜事前質問・予約へ
+                初回30分 3,000円｜オンライン相談を予約する
               </a>
             </div>
 
