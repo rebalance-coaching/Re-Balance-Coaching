@@ -1620,11 +1620,188 @@
       }
     }
 
+
+    /* ===== Re:Balance V46 : shorter, clearer conversion-focused refinement ===== */
+    section {
+      padding: 46px 0;
+    }
+
+    .hero {
+      padding-bottom: 46px;
+    }
+
+    .section-head {
+      margin-bottom: 20px;
+    }
+
+    .hero-strength-note {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #FFF5E9;
+      border: 1px solid #F0D8B8;
+      color: #9A6233;
+      font-weight: 800;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .support-message {
+      padding: 24px;
+      gap: 24px;
+    }
+
+    .support-message-image {
+      height: 290px;
+    }
+
+    .compact-outcomes-section {
+      padding-top: 0;
+    }
+
+    .compact-outcomes {
+      padding: 22px 24px;
+      border: 1px solid #DDE8DC;
+      border-radius: 22px;
+      background: #F8FCF8;
+    }
+
+    .compact-outcomes-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 16px;
+    }
+
+    .compact-outcomes-head h2 {
+      margin: 0;
+      font-size: clamp(1.45rem, 2.5vw, 2rem);
+      line-height: 1.45;
+      color: var(--accent-dark);
+    }
+
+    .compact-outcomes-head p {
+      margin: 0;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .compact-outcome-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .compact-outcome-item {
+      display: grid;
+      gap: 4px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid #DDE8DC;
+      background: #FFFFFF;
+    }
+
+    .compact-outcome-item strong {
+      color: var(--accent-dark);
+    }
+
+    .compact-outcome-item span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    #strength {
+      padding-top: 38px;
+      padding-bottom: 42px;
+    }
+
+    #strength .gain-visual {
+      padding: 22px;
+      gap: 20px;
+    }
+
+    #strength .gain-visual-image {
+      height: 220px;
+    }
+
+    .case-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .case-card {
+      padding: 20px;
+    }
+
+    .case-label-warm,
+    .badge-warm {
+      background: #FFF4E7 !important;
+      color: #B76D35 !important;
+    }
+
+    .testimonial-card {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+
+    .precheck-box {
+      margin-top: 18px;
+      padding: 14px 18px;
+    }
+
+    @media (max-width: 980px) {
+      .case-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .compact-outcomes-head {
+        display: block;
+      }
+
+      .compact-outcomes-head p {
+        margin-top: 6px;
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 700px) {
+      section {
+        padding: 36px 0;
+      }
+
+      .hero {
+        padding-bottom: 38px;
+      }
+
+      .hero-strength-note {
+        display: block;
+        border-radius: 14px;
+      }
+
+      .compact-outcome-grid,
+      .case-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .compact-outcomes {
+        padding: 18px;
+      }
+
+      .support-message-image,
+      #strength .gain-visual-image {
+        height: 210px;
+      }
+    }
+
 </style>
 </head>
 
 <body>
-  <!-- Re:Balance V45 -->
+  <!-- Re:Balance V46 -->
   <header>
     <div class="container nav">
       <a href="#" class="brand" aria-label="Re:Balance 介護者サポート">
@@ -1671,6 +1848,9 @@
             身体の疲れ、介助の悩み、仕事との両立などを、
             今の生活で何を変えられるかという視点から一緒に整理するオンライン個別相談です。
           </p>
+          <div class="hero-strength-note">
+            理学療法士だから、介護する人・される人の身体のことも相談できます。
+          </div>
         </div>
 
         <div class="hero-bottom">
@@ -1715,8 +1895,8 @@
         <div class="section-head">
           <h2>Re:Balanceのオンライン相談</h2>
           <p>
-            話を聞くだけで終わらせず、今の生活で何を変えられるかまで一緒に考えます。
-            介護されるご家族のことだけでなく、介護しているあなた自身のこともご相談いただけます。
+            介護・仕事・家事・身体の疲れなど、今いちばん気になることから整理し、
+            「まず何をするか」まで一緒に考えます。
           </p>
         </div>
 
@@ -1744,7 +1924,7 @@
                 <div>
                   <strong>今、一番困っていることをお話しください</strong>
                   <div class="muted">
-                    今感じている不安や負担をお聞きします。まとまっていなくても大丈夫です。
+                    今いちばん気になっていることからで大丈夫です。
                   </div>
                 </div>
               </div>
@@ -1754,7 +1934,7 @@
                 <div>
                   <strong>気持ち・生活・身体の負担を整理します</strong>
                   <div class="muted">
-                    仕事・家事・介護・休息・身体の状態など、何が負担になっているのかを一緒に整理します。
+                    仕事・家事・介護・休息・身体の状態を整理します。
                   </div>
                 </div>
               </div>
@@ -1764,7 +1944,7 @@
                 <div>
                   <strong>今、変えられそうなことを一緒に考えます</strong>
                   <div class="muted">
-                    家族に頼れること、介護サービス、仕事との調整、休息の取り方などから、今できそうなことを考えます。
+                    家族への頼り方、介護サービス、仕事の調整、休息などから考えます。
                   </div>
                 </div>
               </div>
@@ -1774,7 +1954,7 @@
                 <div>
                   <strong>まずやってみることを一緒に決めます</strong>
                   <div class="muted">
-                    今の生活の中で無理なく始められる、具体的な一歩を一緒に決めます。
+                    無理なく始められる具体的な一歩を決めます。
                   </div>
                 </div>
               </div>
@@ -1784,39 +1964,29 @@
       </div>
     </section>
 
-    <section id="outcomes">
+    <section id="outcomes" class="compact-outcomes-section">
       <div class="container">
-        <div class="section-head">
-          <h2>相談後に、「次に何をすればよいか」が見える状態を目指します。</h2>
-          <p>今の状況を整理し、まず取り組むことを一緒に見つけます。</p>
-        </div>
-
-        <div class="grid-2">
-          <div class="card">
-            <div class="gain-item">
-              <div class="gain-icon">✓</div>
-              <div><strong>今、一番困っていることが整理できる</strong></div>
-            </div>
+        <div class="compact-outcomes">
+          <div class="compact-outcomes-head">
+            <h2>相談後に、「まず何をするか」が見える状態を目指します。</h2>
+            <p>状況に合わせて、次の一歩を具体化します。</p>
           </div>
-
-          <div class="card">
-            <div class="gain-item">
-              <div class="gain-icon">✓</div>
-              <div><strong>自分だけで抱えなくてよいことが見えてくる</strong></div>
+          <div class="compact-outcome-grid">
+            <div class="compact-outcome-item">
+              <strong>困りごとの優先順位が見える</strong>
+              <span>例：仕事・介助・疲れのうち、何から扱うかを決める</span>
             </div>
-          </div>
-
-          <div class="card">
-            <div class="gain-item">
-              <div class="gain-icon">✓</div>
-              <div><strong>今の生活で、まず何を変えるかが見えてくる</strong></div>
+            <div class="compact-outcome-item">
+              <strong>自分だけで抱えなくてよいことが見える</strong>
+              <span>例：家族に頼むこと、専門機関に相談することを分ける</span>
             </div>
-          </div>
-
-          <div class="card">
-            <div class="gain-item">
-              <div class="gain-icon">✓</div>
-              <div><strong>身体の負担を減らすためにできることが分かる</strong></div>
+            <div class="compact-outcome-item">
+              <strong>今の生活で変えることが見える</strong>
+              <span>例：休む時間、仕事の調整、相談先を具体化する</span>
+            </div>
+            <div class="compact-outcome-item">
+              <strong>身体の負担を減らす工夫が分かる</strong>
+              <span>例：介助方法や姿勢、日常の動き方を見直す</span>
             </div>
           </div>
         </div>
@@ -1827,12 +1997,11 @@
       <div class="container">
         <div class="gain-visual" style="margin-bottom: 0;">
           <div class="gain-visual-copy">
-            <div class="case-label">理学療法士だから、身体のことも相談できます</div>
-            <h2>介護する方だけでなく、介護されるご家族の身体についても相談できます。</h2>
+            <div class="case-label">理学療法士として身体の相談にも対応</div>
+            <h2>介護する人・される人、両方の身体を一緒に考えます。</h2>
             <p class="muted">
-              在宅リハビリの現場を経験した理学療法士として、
-              介護する方の腰や肩の負担、介助方法、休息の取り方に加え、
-              介護されるご家族の動きや日常生活、身体の状態についても一緒に整理します。
+              在宅リハビリの経験をもとに、腰や肩の負担、介助方法、
+              ご家族の動きや日常生活について整理します。
             </p>
 
             <div class="care-recipient-points">
@@ -1897,6 +2066,18 @@
             </p>
             <p class="small">
               → 今後必要になりそうなことを整理し、まず何から考えるかを一緒に決めます。
+            </p>
+          </div>
+
+          <div class="case-card">
+            <div class="case-label case-label-warm">身体の疲れ</div>
+            <h3>介助で腰や肩の負担が続いている方</h3>
+            <p class="muted">
+              立ち上がりや移乗を手伝うたびに腰や肩がつらく、
+              この介助方法でよいのか不安がある。
+            </p>
+            <p class="small">
+              → 介助のしかたや姿勢、負担を減らす工夫を一緒に整理します。
             </p>
           </div>
         </div>
@@ -2025,15 +2206,16 @@
           </div>
 
           <div class="card">
-            <div class="badge">じっくり相談</div>
+            <div class="badge badge-warm">じっくり相談</div>
             <h3>60分相談</h3>
             <p class="muted">
               介護・仕事・家族との関係・身体の負担など、
-              複数の悩みを整理し、具体的な対応まで一緒に考えたい方に。
+              複数の悩みに優先順位をつけ、具体的な対応まで考えたい方に。
             </p>
             <div class="price">60分 12,000円</div>
             <p class="small">
-              現在の状況を整理し、今後の具体的な行動までじっくり一緒に考えます。
+              家族に頼むこと、相談先、休息の取り方、介助方法などから、
+              相談後に「まず実行すること」まで具体化します。
             </p>
             <a
               class="btn btn-secondary"
@@ -2064,9 +2246,8 @@
         </div>
 
         <div class="precheck-box">
-          <strong>はじめに、簡単な事前質問へのご回答をお願いします。</strong><br>
-          「誰についての相談か」「ご相談の対象となる方の年代」「現在困っていること・相談したいこと」の3点をご回答ください。
-          送信後、そのまま相談日時の予約画面へ進みます。
+          <strong>はじめに3つの簡単な事前質問にご回答ください。</strong><br>
+          回答を送信すると、そのまま相談日時の予約画面へ進みます。
         </div>
 
         <div class="grid-3">
@@ -2200,6 +2381,13 @@
             <div class="muted">
               A. 事前に接続方法をご案内します。
               できるだけ不安なく参加できるよう配慮します。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <strong>Q. まだ介護保険を使っていなくても相談できますか？</strong>
+            <div class="muted">
+              A. はい。介護が始まったばかりで、何から考えればよいかわからない段階でもご相談いただけます。
             </div>
           </div>
 
